@@ -1,84 +1,151 @@
-🌤️ Weather App (Python)
+# 🌤️ Weather App CLI
 
-A simple Python CLI application that fetches the current temperature of any city using the WeatherAPI.
+A simple Python-based Command Line Weather Application that fetches real-time temperature data using WeatherAPI.
 
-This project demonstrates:
+This project securely retrieves weather data using environment variables for API key protection.
 
-API integration
+Created by Arushi 💙
 
-Environment variable usage for security
+---
 
-Basic error handling
+## 🚀 Features
 
-🚀 Features
+- 🌡️ Get real-time temperature of any city
+- 🔐 Secure API key handling (environment variables)
+- ⚡ Fast and lightweight
+- 💻 Runs directly in terminal
+- ❌ Handles invalid city input gracefully
 
-Get real-time temperature in Celsius 🌡️
+---
 
-Secure API key handling using environment variables 🔐
+## 🛠️ Tech Stack
 
-Simple command-line interface
+- Python  
+- requests library  
+- WeatherAPI  
+ 
+ ---
+ 
 
-Basic error handling
+## 📁 Project Structure
 
-🛠️ Tech Stack
-
-Python 3
-
-requests library
-
-WeatherAPI
-
-📂 Project Structure
+```
 weather-app/
-│
-├── weather.py
-└── README.md
-⚙️ Setup Instructions
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/weather-app.git
+│── weather.py
+│── README.md
+```
+
+---
+
+## ▶️ How to Run
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/weather-app.git
+```
+
+### 2️⃣ Navigate to the project folder
+
+```bash
 cd weather-app
-2️⃣ Install Dependencies
+```
+
+### 3️⃣ Install dependencies
+
+```bash
 pip install requests
-3️⃣ Get Your API Key
+```
 
-Create an account at:
-https://www.weatherapi.com/
+### 4️⃣ Get Your API Key
 
-Copy your API key.
+1. Create an account at: https://www.weatherapi.com/
+2. Generate your API key from the dashboard.
 
-4️⃣ Set Environment Variable (Important 🔐)
-🪟 Windows (PowerShell)
+---
+
+### 5️⃣ Set your API key (Important 🔐)
+
+#### Windows (PowerShell)
+
+```bash
 setx WEATHER_API_KEY "your_api_key_here"
+```
 
-Restart your terminal after this.
+Restart your terminal after running this command.
 
-🍎 Mac/Linux
+#### Mac/Linux
+
+```bash
 export WEATHER_API_KEY="your_api_key_here"
-▶️ Run the Program
+```
+
+---
+
+### 6️⃣ Run the program
+
+```bash
 python weather.py
+```
 
-Example:
+---
 
+## 💻 Example Usage
+
+When you run the program:
+
+```bash
 Enter the city name: London
+```
+
+The program will display:
+
+```
 The temperature in London is: 12°C
-🔐 Security Best Practice
+```
 
-This project does NOT store the API key directly in the source code.
+If the city is invalid:
 
-Instead, it uses:
+```
+Error fetching weather data. Please check the city name.
+```
 
+---
+
+## 🔐 Security Note
+
+This project does **NOT** store the API key directly in the source code.
+
+It uses:
+
+```python
 os.getenv("WEATHER_API_KEY")
+```
 
 This prevents accidental exposure of sensitive information on GitHub.
 
-📈 Future Improvements
+---
 
-Show humidity and wind speed
 
-Add weather condition description
+## 🎯 Future Improvements
 
-Add forecast feature
+- Show humidity and wind speed  
+- Add weather condition description  
+- Add 3–5 day forecast  
+- Build GUI version (Tkinter)  
+- Deploy as web app (Flask)  
+- Dockerize the project  
 
-Convert into a web app using Flask
+---
 
-Add Docker support
+## 📜 License
+
+This project is open-source and free to use for learning purposes.
+
+---
+
+## 🙌 Contribution
+
+Feel free to fork this project and improve it.  
+Pull requests are welcome!
+
